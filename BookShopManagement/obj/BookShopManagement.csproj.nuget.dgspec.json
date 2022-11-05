@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Learnings\\BookShopManagement\\BookShopManagement\\BookShopManagement.csproj": {}
+    "D:\\Learnings\\Learn-Minimal-API\\BookShopManagement\\BookShopManagement.csproj": {}
   },
   "projects": {
-    "D:\\Learnings\\BookShopManagement\\BookShopManagement\\BookShopManagement.csproj": {
+    "D:\\Learnings\\Learn-Minimal-API\\BookShopManagement\\BookShopManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Learnings\\BookShopManagement\\BookShopManagement\\BookShopManagement.csproj",
+        "projectUniqueName": "D:\\Learnings\\Learn-Minimal-API\\BookShopManagement\\BookShopManagement.csproj",
         "projectName": "BookShopManagement",
-        "projectPath": "D:\\Learnings\\BookShopManagement\\BookShopManagement\\BookShopManagement.csproj",
+        "projectPath": "D:\\Learnings\\Learn-Minimal-API\\BookShopManagement\\BookShopManagement.csproj",
         "packagesPath": "C:\\Users\\Banuri\\.nuget\\packages\\",
-        "outputPath": "D:\\Learnings\\BookShopManagement\\BookShopManagement\\obj\\",
+        "outputPath": "D:\\Learnings\\Learn-Minimal-API\\BookShopManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -47,9 +47,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
