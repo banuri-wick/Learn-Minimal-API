@@ -1,2 +1,2 @@
-# Learn_SimpleAPI
-This is to learn .NET6 Simple API
+# Learn_MinimalAPI
+This is to learn .NET6 Minimal API
