@@ -79,5 +79,16 @@ namespace BookShopManagement.Repositories
             
             _context.SaveChanges();
         }
+
+        public void DeleteBook(int id)
+        {
+            var bookToBeDeleted = _context.Books.FirstOrDefault(x => x.Id == id);
+
+            if (bookToBeDeleted != null)
+            {
+                _context.Books.Remove(bookToBeDeleted);
+                _context.SaveChanges();
+            }
+        }
     }
 }

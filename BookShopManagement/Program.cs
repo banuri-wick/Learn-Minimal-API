@@ -39,5 +39,6 @@ app.UseHttpsRedirection();
 app.MapGet("/api/getAllBooks", (IBookService bookService) => bookService.GetAllBooks());
 app.MapPost("/api/createBook", (IBookService bookService, Request request) => bookService.CreateBooks(request));
 app.MapPut("/api/updateBook", (IBookService bookService, Book request) => bookService.UpdateBook(request));
+app.MapDelete("/api/deleteBook", (IBookService bookService, int id) => bookService.DeleteBook(id));
 
 app.Run();
