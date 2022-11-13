@@ -16,11 +16,6 @@ namespace BookShopManagement.Repositories
             seedBooks();
         }
 
-        public void CreateBooks(Request request)
-        {
-            throw new NotImplementedException();
-        }
-
         public void seedBooks() 
         {
             if (_context.Books.Any())
@@ -32,16 +27,14 @@ namespace BookShopManagement.Repositories
                         Id = 1,
                         Name = "Book 1",
                         Author = "Author 1",
-                        Price = 200,
-                        stocksAvailable = 5
+                        Price = 200
                     },
                     new Book()
                     {
                         Id = 2,
                         Name = "Book 2",
                         Author = "Author 2",
-                        Price = 150,
-                        stocksAvailable = 2
+                        Price = 150
                     }
                 );
             _context.SaveChanges();
@@ -58,6 +51,33 @@ namespace BookShopManagement.Repositories
             {
                 throw;
             }
+        }
+
+        public void CreateBooks(Request request)
+        {
+            var newId = _context.Books.Count() + 1;
+            _context.Books.Add(new Book()
+            {
+                Id = newId,
+                Name = request.Name,
+                Author = request.Author,
+                Price = (double)request.Price
+            });
+            _context.SaveChanges();
+        }
+
+        public void UpdateBook(Book updatedBook)
+        {
+            var currentBookData = _context.Books.FirstOrDefault(x => x.Id == updatedBook.Id);
+
+            if (currentBookData != null) 
+            {
+                currentBookData.Name = updatedBook.Name;
+                currentBookData.Author = updatedBook.Author;
+                currentBookData.Price = updatedBook.Price;
+            }
+            
+            _context.SaveChanges();
         }
     }
 }

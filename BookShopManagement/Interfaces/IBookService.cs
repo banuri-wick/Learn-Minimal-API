@@ -6,5 +6,6 @@ namespace BookShopManagement.Interfaces
     {
         IEnumerable<Book> GetAllBooks();
         void CreateBooks(Request request);
+        void UpdateBook(Book updatedBook);
     }
 }
